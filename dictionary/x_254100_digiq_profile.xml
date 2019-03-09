@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element attributes="live_feed=true" label="Profile" max_length="40" name="x_254100_digiq_profile" type="collection">
+        <element label="Country Code" max_length="40" name="country_code" type="integer"/>
+        <element attributes="edge_encryption_enabled=true" label="Date of Birth" max_length="40" name="date_of_birth" type="glide_date_time"/>
+        <element attributes="edge_encryption_enabled=true" label="Education" max_length="40" name="education" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Email" max_length="40" name="email" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Experience Summary" max_length="40" name="experience_summary" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="First Name" max_length="40" name="first_name" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Last Name" max_length="40" name="last_name" type="string"/>
+        <element label="Mobile" max_length="40" name="mobile" type="integer"/>
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Phone Type" max_length="40" name="phone_type" type="string">
+            <choice/>
+        </element>
+        <element label="Preferred Location" max_length="32" name="preferred_location" reference="cmn_location" type="reference"/>
+        <element default="javascript:current.getTableName();" label="Class" max_length="80" name="sys_class_name" type="sys_class_name"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Use Debit/Credit Cards" max_length="40" name="use_debit_credit_cards" type="string">
+            <choice/>
+        </element>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Use Internet Banking" max_length="40" name="use_internet_banking" type="string">
+            <choice/>
+        </element>
+        <element label="Professional Age" max_length="40" name="u_glide_time_1" type="glide_time"/>
+        <index name="index">
+            <element name="preferred_location"/>
+        </index>
+        <index name="index2">
+            <element name="sys_class_name"/>
+        </index>
+    </element>
+</database>
